@@ -12,6 +12,16 @@ module.exports = function(grunt) {
         dest: 'css/<%= pkg.name %>.add.css'
       }
     },
+
+    watch: {
+        scripts: {
+            files: ['*/**/base.css'],
+            tasks: ['css'],
+            options: {
+                spawn: false,
+            },
+        },
+    },
     
     cssmin: {
       'css/main.min.css': [
@@ -19,9 +29,9 @@ module.exports = function(grunt) {
       ]
     }
   });
-
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.registerTask('default', ['concat', 'cssmin']);
+  grunt.registerTask('default', ['watch']);
   grunt.registerTask('css', ['concat', 'cssmin']);
 };
