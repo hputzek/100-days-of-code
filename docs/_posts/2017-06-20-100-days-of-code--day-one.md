@@ -19,11 +19,24 @@ links:
     name: Introduction to jekyll front matter, especially arrays
   - url: https://gomakethings.com/ditching-jquery-for-vanilla-js/
     name: Ditching jquery for vanilla js
+  - url: https://stackoverflow.com/questions/11887929/how-do-i-loop-through-tags-in-a-jekyll-post
+    name: Loop through tags in Jekyll Post
+  - url: https://stackoverflow.com/questions/8498592/extract-hostname-name-from-string
+    name: Extract hostname from string
+  - url: https://help.github.com/articles/adding-a-remote/
+    name: add or remove a git remote (I checked out https instead of ssh)
 ---
 
 # I've joined the #100DaysOfCode Challenge.
 
 My first project is to configure my diary.
+
+What I've done today:
+
+* Fork the original repo
+* Add Jekyll and a template
+* Configure the template
+* Build a "link dump" functionality: 
 
 
 

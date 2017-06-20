@@ -4,7 +4,7 @@ description: >
 about: >
     At this page I track my progress and my learnings from my 100 days of code challenge.
 
-url: "http://putzek.com/100-days-of-code/"
+url: "http://putzek.com/100-days-of-code"
 baseurl: "/"
 markdown: kramdown
 highlighter: rouge
@@ -17,15 +17,15 @@ logo:             logo.png
 disqus_shortname:
 
 owner:
-  name:           whitepaper
+  name:           Hendrik Putzek
   avatar:         ""
-  email:          ""
+  email:          "hendrik.putzek@dkd.de"
   # Social networking links used in footer. Update and remove as you like.
-  twitter:
-  github:
+  twitter: "https://twitter.com/hputzek"
+  github: https://github.com/hputzek/
   stackexchange:
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:
+  google_plus: https://plus.google.com/+HendrikPutzek
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:
