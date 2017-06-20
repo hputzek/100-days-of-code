@@ -4,7 +4,7 @@ description: >
 about: >
     At this page I track my progress and my learnings from my 100 days of code challenge.
 
-url: "http://vinitkumar.me/white-paper"
+url: "http://putzek.com/100-days-of-code/"
 baseurl: "/"
 markdown: kramdown
 highlighter: rouge
