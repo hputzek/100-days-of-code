@@ -1,0 +1,72 @@
+---
+layout: default
+---
+<div class="post">
+    <h2>{{ page.title }}</h2>
+
+    <p class="meta">{{ page.date | date_to_string }}</p>
+
+    {{ content }}
+
+    <h2>Learnings today:</h2>
+    <ul class="learnings-list">
+        {% for learning in page.learnings %}
+        <li>{{ learning }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Link Dump for today:</h2>
+    <ul id="faviconLinks" class="faviconLinks link-list">
+        {% for link in page.links %}
+        <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% if site.owner.twitter %}
+    <div class="keep-in-touch">
+      <p>
+        Tweet me <a href="https://twitter.com/{{site.owner.twitter}}">@{{ site.owner.twitter }}</a> if you like this post.
+      </p>
+    </div>
+{% endif %}
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.owner.twitter }}" data-size="large" data-hashtags="{{site.name}}">Tweet</a>
+
+<script>
+    function addPreviewImages() {
+        var linkLists = document.querySelectorAll('.faviconLinks');
+
+        for (var i = 0, len = linkLists.length; i < len; i++) {
+            var links = linkLists[i].querySelectorAll('a');
+
+            for (var j = 0, length = links.length; j < length; j++) {
+                var linkUrl =  getDomain(links[j].getAttribute("href")) + '/favicon.ico';
+                var linkElement = links[j];
+                var favicon = new Image();
+                favicon.src = linkUrl;
+                favicon.onerror = function(){
+                    // image not found
+                    this.classList.add('no-image-found');
+                };
+                favicon.setAttribute('src', linkUrl);
+                favicon.setAttribute('title', linkElement.innerHTML);
+                favicon.setAttribute('class', "link--icon");
+                linkElement.prepend(favicon);
+            }
+        }
+    }
+
+    addPreviewImages();
+
+    function getDomain(data) {
+        var    a      = document.createElement('a');
+        a.href = data;
+        return a.protocol + '//' + a.hostname;
+    }
+</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+{% if site.disqus_shortname %}
+{% include disqus_comments.html %}
+{% endif %}

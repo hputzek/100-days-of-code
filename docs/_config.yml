@@ -1,0 +1,34 @@
+name: 100 days of code - My code diary
+description: >
+    This is the diary of the 100 days of code challenge from Hendrik Putzek
+about: >
+    At this page I track my progress and my learnings from my 100 days of code challenge.
+
+url: "http://vinitkumar.me/white-paper"
+baseurl: "/"
+markdown: kramdown
+highlighter: rouge
+
+plugins: [jekyll-paginate,  jekyll-gist]
+
+paginate: 3
+
+logo:             logo.png
+disqus_shortname:
+
+owner:
+  name:           whitepaper
+  avatar:         ""
+  email:          ""
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:
+  github:
+  stackexchange:
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
