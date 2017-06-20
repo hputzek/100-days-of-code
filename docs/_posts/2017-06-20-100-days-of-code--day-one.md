@@ -37,6 +37,13 @@ What I've done today:
 * Add Jekyll and a template
 * Configure the template
 * Build a "link dump" functionality: 
+	* Links and their description can be put in YAML FrontMatter
+	* A link list is generated
+	* The link list automatically tries to grab a favicon from the linked site and shows it if it finds one
+	
+What I'm planning to do next:
+The diary still looks quite raw and ugly.
+So I'll add some styling I think.
 
 
 
