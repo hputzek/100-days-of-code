@@ -6,8 +6,7 @@ category: diary
 tags: [css, javascript, jekyll, liquid]
 comments: false
 learnings: 
-  - Everything takes longer than expected
-  - But thats fine
+  - I have to get more fluid in javascript
 links:
   - url: https://webkul.github.io/coolhue
     name: Coolest Gradient Hues and Swatches by UVdesk
@@ -27,3 +26,6 @@ Today I did learn some vanilla JS.
 ** could be improved by setting the startdate in ```config.yml```
 
 ### What I'm planning to do next
+
+* Finish up the design of this diary
+* Start with the next project: a portfolio page for a friend
