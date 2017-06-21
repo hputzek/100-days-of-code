@@ -10,5 +10,9 @@ learnings:
   - But thats fine
 links:
   - url: www.google.de
-  - name: Google
+    name: Google
 ---
+
+### What I've done today
+
+### What I'm planning to do next

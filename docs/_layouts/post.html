@@ -8,14 +8,14 @@ layout: default
 
     {{ content }}
 
-    <h2>Learnings today:</h2>
+    <h3>Learnings today:</h3>
     <ul class="learnings-list">
         {% for learning in page.learnings %}
         <li>{{ learning }}</li>
         {% endfor %}
     </ul>
 
-    <h2>Link Dump for today:</h2>
+    <h3>Link Dump for today:</h3>
     <ul id="faviconLinks" class="faviconLinks link-list">
         {% for link in page.links %}
         <li><a href="{{ link.url }}">{{ link.name }}</a></li>
@@ -45,14 +45,23 @@ layout: default
                 var linkElement = links[j];
                 var favicon = new Image();
                 favicon.src = linkUrl;
-                favicon.onerror = function(){
+                favicon.onerror = function(linkElement){
                     // image not found
-                    this.classList.add('no-image-found');
+                    console.log(linkElement);
+                    var placeholder = document.createElement('div');
+                    placeholder.classList.add('no-image-found');
+                    placeholder.classList.add('link--icon');
+                    placeholder.classList.add('mega-octicon');
+                    placeholder.classList.add('octicon-file-symlink-file');
+                    linkElement.target.remove();
+                    linkElement.path[1].prepend(placeholder);
                 };
+
                 favicon.setAttribute('src', linkUrl);
                 favicon.setAttribute('title', linkElement.innerHTML);
                 favicon.setAttribute('class', "link--icon");
                 linkElement.prepend(favicon);
+
             }
         }
     }
