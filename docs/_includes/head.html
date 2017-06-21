@@ -13,6 +13,7 @@
 <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:image" content="{{ site.url }}/{{ site.logo }}">
 
 <!-- Webmaster Tools verfication -->
 {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
@@ -24,7 +25,7 @@
 {% if site.owner.google_plus %}<link rel="author" href="{{ site.owner.google_plus }}?rel=author">{% endif %}
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+<link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700|Open+Sans:300" rel="stylesheet">
 <link rel="stylesheet" href="{{ site.url }}/css/main.min.css" type="text/css" />
 <script src="https://www.celljs.org/cell.js"></script>
 <script src="{{ site.url }}/js/cell.js"></script>

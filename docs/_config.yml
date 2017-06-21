@@ -13,7 +13,7 @@ plugins: [jekyll-paginate,  jekyll-gist]
 
 paginate: 3
 
-logo:             logo.png
+logo:             assets/logo.png
 disqus_shortname:
 
 owner:

@@ -7,7 +7,7 @@
   margin:0;
   box-sizing: border-box;
 }
-h1, h2, h3, h4, h5, h6, p, pre, blockquote, label, ul, ol, dl, fieldset, address { margin:0 0 1em 0; }
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, label, ul, ol, dl, fieldset, address { margin:0 0 .2em 0; }
 li, dd { margin-left:5%; }
 fieldset { padding: .5em; }
 select option{ padding:0 5px; }
@@ -37,7 +37,7 @@ html {
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Gentium Book Basic', serif;
   font-size: 17px;
   line-height: 1.4;
   color: #333;
@@ -70,6 +70,9 @@ hr:before {
   content: '\2022 \2022 \2022 \2022 \2022';
 }
 
+ul {
+  margin-bottom: 30px;
+}
 .container {
   background: #eee;
   margin: 0 auto;
@@ -221,7 +224,6 @@ ul.nav li.logo a {
 }
 
 .listing .post.other .icon {
- font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   float: left;
   margin-top: -3px;
   margin-left: -35px;
@@ -261,14 +263,6 @@ p.date {
   color: #aaa;
   margin: 20px 0 0 0;
 }
-
-p.intro {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 32px;
-  line-height: 1.2;
-  text-align: justify;
-  font-weight: lighter;
-}
 @media only screen and (max-width: 520px) {
   p.intro {
     font-size: 20px;
@@ -289,11 +283,11 @@ h1.link .desc {
   color: #000;
 }
 
-  h1 {
-    font-size: 30px;
-    letter-spacing: 0;
-    margin-bottom: 20px;
-  }
+h1 {
+  font-size: 30px;
+  letter-spacing: 0;
+  margin-bottom: 40px;
+}
 
 
 h2 {
@@ -600,7 +594,14 @@ code.html span.doctype {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.clip {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  text-shadow: none;
 }
 
 
