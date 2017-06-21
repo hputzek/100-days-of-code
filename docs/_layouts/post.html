@@ -1,11 +1,14 @@
 ---
 layout: default
 ---
+{%   assign today = page.date | date: '%s'      %}
+{%   assign start = '19-06-2017 00:00:00' | date: '%s'  %}
+{%   assign secondsSince = today | minus: start     %}
+{%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
+{%   assign daysSince = hoursSince | divided_by: 24  %}
 <div class="post">
-    <h1>{{ page.title }}</h1>
-
     <p class="meta">{{ page.date | date_to_string }}</p>
-
+    <h1>Day {{ daysSince }}: {{ page.title }}</h1>
     {{ content }}
 
     <h3>Learnings today:</h3>
@@ -30,8 +33,6 @@ layout: default
       </p>
     </div>
 {% endif %}
-
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.owner.twitter }}" data-size="large" data-hashtags="{{site.name}}">Tweet</a>
 <div class="back-button">
     <a href="{{ site.url }}" class="button gradient"><span class="mega-octicon octicon-chevron-left"></span>back</a>
 </div>

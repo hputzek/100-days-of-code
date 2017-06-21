@@ -6,7 +6,7 @@ theBody = {
         this._applyGradient();
     },
     _setGradient: function() {
-        var gradient = this._colorData[Math.floor((Math.random() * this._colorData.length) + 1)];
+        var gradient = this._colorData[Math.floor((Math.random() * this._colorData.length))];
         tempColorFrom = gradient[0];
         tempColorTo = gradient[1];
         this._settings.css = this._settings.backgroundImage + this._settings.gradientType + tempColorFrom + this._settings.gradientStart + tempColorTo + this._settings.gradientEnd;
