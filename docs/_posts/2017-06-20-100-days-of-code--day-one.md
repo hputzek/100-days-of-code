@@ -26,9 +26,6 @@ links:
   - url: https://help.github.com/articles/adding-a-remote/
     name: add or remove a git remote (I checked out https instead of ssh)
 ---
-
-# I've joined the #100DaysOfCode Challenge.
-
 My first project is to configure my diary.
 
 What I've done today:

@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="post">
-    <h2>{{ page.title }}</h2>
+    <h1>{{ page.title }}</h1>
 
     <p class="meta">{{ page.date | date_to_string }}</p>
 
@@ -32,6 +32,9 @@ layout: default
 {% endif %}
 
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.owner.twitter }}" data-size="large" data-hashtags="{{site.name}}">Tweet</a>
+<div class="back-button">
+    <a href="{{ site.url }}" class="button gradient"><span class="mega-octicon octicon-chevron-left"></span>back</a>
+</div>
 
 <script>
     function addPreviewImages() {
@@ -47,7 +50,6 @@ layout: default
                 favicon.src = linkUrl;
                 favicon.onerror = function(linkElement){
                     // image not found
-                    console.log(linkElement);
                     var placeholder = document.createElement('div');
                     placeholder.classList.add('no-image-found');
                     placeholder.classList.add('link--icon');

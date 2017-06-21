@@ -5,6 +5,7 @@
 * {
   padding:0;
   margin:0;
+  box-sizing: border-box;
 }
 h1, h2, h3, h4, h5, h6, p, pre, blockquote, label, ul, ol, dl, fieldset, address { margin:1em 0; }
 li, dd { margin-left:5%; }
@@ -31,13 +32,18 @@ a img{ border:none; }
   Main Layout
 ----------------------------------------------------------------------------*/
 
+html {
+  height: 100%;
+}
+
 body {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 17px;
   line-height: 1.4;
   color: #333;
   text-shadow: 0 1px 0 rgba(255,255,255,1.0);
   border-top: 4px solid #556270;
+  height: 100%;
 }
 
 strong {
@@ -65,9 +71,10 @@ hr:before {
 }
 
 .container {
+  background: #eee;
   margin: 0 auto;
   max-width: 1080px;
-  padding: 0 20px;
+  padding: 25px 20px 20px;
 }
 
 .header-container {
@@ -76,25 +83,36 @@ hr:before {
 }
 
 header {
-  margin: 0 0 20px 0;
   text-align: right;
   margin: 0 auto;
   max-width: 1080px;
-  padding: 0 20px;
+  padding: 0;
 }
 
 ul.nav {
+  font-size: 0;
   margin: 0;
-  padding: 12px 0 10px 0;
+  padding: 0;
   list-style-type: none;
   line-height: 30px;
 }
 ul.nav li {
-  margin: 0 20px;
+  margin: 0;
   display: inline-block;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 300;
+}
+
+ul.nav a {
+  padding: 12px 15px 10px 15px;
+  display: inline-block;
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  text-shadow: none;
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: 14px;
 }
 @media only screen and (max-width: 520px) {
   ul.nav {
@@ -111,11 +129,6 @@ ul.nav li {
     left: 50%;
     margin-left: -14px;
   }
-}
-ul.nav li a {
-  color: #000;
-  text-decoration: none;
-  font-weight: lighter;
 }
 
 ul.nav li.logo {
@@ -241,9 +254,6 @@ p.intro a {
   color: #55acee;
 }
 
-h1 {
-  margin-left: 20px;
-}
 h1.words {
   color: #DB2C17;
 }
@@ -522,6 +532,39 @@ code.html span.doctype {
 
 .link--icon.no-image-found {
   dvisibility: hidden;
+}
+
+
+.button {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  padding: 0 10px;
+  margin: 0 auto;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  border: 0;
+  cursor: pointer;
+}
+.button:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.button .mega-octicon {
+  margin-right: 10px;
+}
+
+.back-button {
+  text-align: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace;
 }
 
 
