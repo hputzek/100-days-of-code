@@ -23,7 +23,7 @@ Today I did learn some vanilla JS.
 * Did a lot of styling, also for responsive behaviour
 * Fixed Link Icons: Link text does not flow around them when having multiple lines
 * The current day is added automatically in the post headlines
-** could be improved by setting the startdate in ```config.yml```
+	* could be improved by setting the startdate in ```config.yml```
 
 ### What I'm planning to do next
 
