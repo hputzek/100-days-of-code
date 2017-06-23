@@ -6,20 +6,22 @@ title: #100daysOfCode Challenge - a diary from Hendrik Putzek
 <h1>
     {{ site.name }}
 </h1>
-
-
-{{ site.description }}
+<p>
+    {{ site.description }}
+</p>
 <div class="listing">
     {% for post in paginator.posts %}
-
     {%   assign today = post.date | date: '%s'      %}
     {%   assign start = '19-06-2017 00:00:00' | date: '%s'  %}
     {%   assign secondsSince = today | minus: start     %}
     {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
     {%   assign daysSince = hoursSince | divided_by: 24  %}
-    <div class="post other link">
-      <p class="post-date">{{ post.date | date_to_string }}</p>
-      <h2><span class="mega-octicon octicon-book" style="min-width: 32px;"></span><a href="{{site.url}}{{post.url}}">Day {{daysSince}}: {{ post.title }}</a></h2>
+    <div class="post-preview">
+        <div class="mega-octicon octicon-book post-preview--icon"></div>
+        <div class="post-preview--content">
+            <h2 class="post-preview--headline"><a href="{{site.url}}{{post.url}}">Day {{daysSince}}: {{ post.title }}</a></h2>
+            {% if post.description %}<p class="post-preview--description"><span class="post-date">{{ post.date | date_to_string }}</span> ~ {{ post.description }} </p>{% endif %}
+        </div>
     </div>
     {% endfor %}
 </div>

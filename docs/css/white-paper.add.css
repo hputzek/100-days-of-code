@@ -51,11 +51,21 @@ strong {
 }
 
 a {
-  color: #2382c8;
   text-decoration: none;
+  display: inline-block;
+  color: #2382c8;
+  transition: .3s all;
 }
 a:hover {
   text-decoration: underline;
+  text-decoration-skip: ink;
+}
+
+.visuallyHidden {
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  width: 1px;
 }
 
 p {
@@ -209,11 +219,6 @@ ul.nav li.logo a {
   border: none;
 }
 
-.listing .post h2 a {
-  color: #55acee;
-  text-decoration: none;
-}
-
 .listing .post .post-summary {
   font-size: 20px;
   color: #777;
@@ -227,9 +232,7 @@ ul.nav li.logo a {
   font-size: 21px;
   font-weight: lighter;
 }
-.listing .post.other h2 a {
-  color: #55acee;
-}
+
 .listing .post.other p:last-child {
   margin-bottom: 0;
 }
@@ -266,6 +269,21 @@ ul.nav li.logo a {
   }
 }
 
+.post-preview{
+  display: flex;
+}
+
+.post-preview--headline{
+  margin-bottom: 0;
+}
+
+.post-preview--icon {
+  flex: 0 0 auto;
+  margin-top: .3em;
+  margin-right: 10px;
+}
+
+
 /*------------------------------------------------------------------------------
   Post Styles
 ------------------------------------------------------------------------------*/
@@ -283,9 +301,6 @@ p.date {
     font-size: 20px;
   }
 }
-p.intro a {
-  color: #55acee;
-}
 
 h1.words {
   color: #DB2C17;
@@ -301,7 +316,7 @@ h1.link .desc {
 h1 {
   font-size: 30px;
   letter-spacing: 0;
-  margin-bottom: 40px;
+  line-height: 1.2;
 }
 
 
@@ -314,8 +329,6 @@ h3 {
   font-size: 20px;
   color: #333;
 }
-h3 a, h3 a:visited, h2 a, h2 a:visited{ color:#000; }
-h3 a:hover, h2 a:hover{ color:#000; border:none; }
 
 h4 {
   font-size: 1em;
@@ -412,7 +425,6 @@ p.note {
 @media only screen and (max-width: 520px) {
   h1 {
     font-size: 30px;
-    line-height: 1.0;
     letter-spacing: 0;
   }
 
@@ -442,12 +454,10 @@ p > a > img {
   padding-top: 20px;
   border-top: 1px solid #fff;
 }
-.keep-in-touch a {
-  color: #55acee;
-}
 
 .post-date {
   font-size: 14px;
+  margin-bottom: 0;
 }
 
 @media only screen and (max-width: 520px) {
