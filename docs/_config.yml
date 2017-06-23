@@ -1,7 +1,9 @@
 name: 100 days of code - My code diary
+title: 100 days of code challenge
 description: >
     This is the diary of the 100 days of code challenge from Hendrik Putzek
 about: >
+    # The challenge
     At this page I track my progress and my learnings from my 100 days of code challenge.
 
 url: "http://putzek.com/100-days-of-code"
@@ -18,7 +20,7 @@ disqus_shortname:
 
 owner:
   name:           Hendrik Putzek
-  avatar:         ""
+  avatar:         "/assets/hendrik-putzek-foto.jpg"
   email:          "hendrik.putzek@dkd.de"
   # Social networking links used in footer. Update and remove as you like.
   twitter: "hputzek"
@@ -29,6 +31,6 @@ owner:
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:
-google_verify:
+google_verify: iQY6Mb1ycKX1SWYCSaRHhehoFf-YqZqlotlMxkg7PDM
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:

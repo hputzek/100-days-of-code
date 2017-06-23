@@ -4,6 +4,23 @@
   {% include head.html %}
 </head>
 <body >
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "WebPage",
+  "author": {
+    "@type": "Person",
+    "name": "Hendrik Putzek",
+    "jobTitle": "Webdeveloper",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Frankfurt",
+      "addressRegion": "60528"
+    },
+    image: "{{ site.url }}{{ site.owner.avatar }}"
+  }
+}
+</script>
 <div id="cell">
   {% include header.html %}
   <div class="container">
