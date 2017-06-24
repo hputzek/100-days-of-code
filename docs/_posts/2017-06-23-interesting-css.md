@@ -6,6 +6,7 @@ category: diary
 tags: [javascript, css, vue.js, templating]
 comments: false
 learnings: 
+  - there are some really nice css props that finally work in modern browsers
 links:
   - url: https://webcode.tools/json-ld-generator/person
     name: JSON-ld generator
@@ -49,3 +50,5 @@ This makes them align correctly also on mobile
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### What I'm planning to do next
+
+Finally work on the [portfolio](https://github.com/hputzek/portfolio-rocio "Portfolio on github")
