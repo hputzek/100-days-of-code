@@ -640,4 +640,10 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 
+img + em {
+  margin: -10px 0 0 0;
+  font-size: 11px;
+  display: block;
+}
+
 

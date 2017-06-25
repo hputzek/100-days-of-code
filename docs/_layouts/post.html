@@ -11,14 +11,15 @@ layout: default
     <h1>Day {{ daysSince }}: {{ page.title }}</h1>
     {{ content }}
     <hr/>
-    <h3>Learnings today:</h3>
+    {% if page.learnings %}<h3>Learnings today:</h3>{% endif %}
     <ul class="learnings-list">
         {% for learning in page.learnings %}
         <li>{{ learning }}</li>
         {% endfor %}
     </ul>
-    <hr/>
-    <h3>Link Dump for today:</h3>
+    {% if page.learnings %}<hr/>{% endif %}
+
+    {% if page.links %}<h3>Link Dump for today:</h3>{% endif %}
     <ul id="faviconLinks" class="faviconLinks link-list">
         {% for link in page.links %}
         <li><a href="{{ link.url }}">{{ link.name }}</a></li>
