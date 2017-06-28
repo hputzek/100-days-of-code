@@ -10,7 +10,7 @@ links:
     name: NODE17 FORUM FOR DIGITAL ARTS – DESIGNING HOPE
 ---
 
-![Open Call Banner]({{ site.url }}/assets/OpenCallBanner.jpg "Open CAll Banner")
+![Open Call Banner]({{ site.url }}/assets/OpenCallBanner.jpg "Open Call Banner")
 
 This whole week I'm participating in a week full of art, discourse and learning. 
 Node is a platform for exchange among artists, designers and technologists, thinkers, practitioners and curious people of all ages who like to think beyond their daily scope.
