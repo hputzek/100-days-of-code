@@ -41,6 +41,10 @@ I use a pretty fast library here to save time in the build process. Its called s
 For the webpack side of things I use ``responsive-image-loader`` and in gulp I use ``gulp responsive``
 Actually I dont create responsive image versions with gulp, but it uses the fast sharp library :-)
 
+Why webpack AND gulp?
+
+Because webpack automagically creates an image object which also contains the image size. I need that.
+The gulp task is more "dumb" and just processes everything from its input dir to its output dir.
 ### What I'm planning to do next
 
 Working on the responsive image vue component
