@@ -5,8 +5,8 @@ layout: default
 {%   assign start = page.startDate | date: '%s'  %}
 {%   assign secondsSince = today | minus: start     %}
 {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
-{ {%   assign daysSince = hoursSince | divided_by: 24 | plus: 2  %}
-<div class="post">
+{%   assign daysSince = hoursSince | divided_by: 24 | plus: 2  %}
+<div class="post container">
     <p class="meta">{{ page.date | date_to_string }}</p>
     <h1>Day {{ daysSince }}: {{ page.title }}</h1>
     {{ content }}
@@ -28,18 +28,6 @@ layout: default
         {% endfor %}
     </ul>
 </div>
-
-{% if site.owner.twitter %}
-    <div class="keep-in-touch">
-      <p>
-        Tweet me <a href="https://twitter.com/{{site.owner.twitter}}">@{{ site.owner.twitter }}</a> if you like this post.
-      </p>
-    </div>
-{% endif %}
-<div class="back-button">
-    <a href="{{ site.url }}" class="button gradient"><span class="mega-octicon octicon-chevron-left"></span>back</a>
-</div>
-
 <script>
     function addPreviewImages() {
         var linkLists = document.querySelectorAll('.faviconLinks');
@@ -81,7 +69,3 @@ layout: default
     }
 </script>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-{% if site.disqus_shortname %}
-{% include disqus_comments.html %}
-{% endif %}

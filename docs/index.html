@@ -1,27 +1,56 @@
+--- 
+layout: default 
+title: #100daysOfCode Challenge - a diary from Hendrik Putzek 
 ---
-layout: default
-title: #100daysOfCode Challenge - a diary from Hendrik Putzek
----
+<section class="timeline">
+    <ul>
+        {% for post in paginator.posts %} {% assign today = post.date | date: '%s' %} {% assign start = post.startDate | date: '%s'
+        %} {% assign secondsSince = today | minus: start %} {% assign hoursSince = secondsSince | divided_by: 60 | divided_by:
+        60 %} {% assign daysSince = hoursSince | divided_by: 24 | plus: 2 %}
+        <li class="post-preview" data-day="{{daysSince}}">
+            <a class="post-preview--content" href="{{site.url}}{{post.url}}">
+                <time datetime="{{ post.date}}">{{ post.date | date_to_string }}</time>
+                <h2 class="post-preview--headline">{{ post.title }}</h2>
+                {% if post.description %}
+                <p class="post-preview--description">{{ post.description }}</p>{% endif %}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
 
-<h1>
-    {{ site.name }}
-</h1>
-<p>
-    {{ site.description }}
-</p>
-<div class="listing">
-    {% for post in paginator.posts %}
-    {%   assign today = post.date | date: '%s'      %}
-    {%   assign start = post.startDate | date: '%s'  %}
-    {%   assign secondsSince = today | minus: start     %}
-    {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
-    {%   assign daysSince = hoursSince | divided_by: 24 | plus: 2  %}
-    <div class="post-preview">
-        <div class="mega-octicon octicon-book post-preview--icon"></div>
-        <div class="post-preview--content">
-            <h2 class="post-preview--headline"><a href="{{site.url}}{{post.url}}">Day {{daysSince}}: {{ post.title }}</a></h2>
-            {% if post.description %}<p class="post-preview--description"><span class="post-date">{{ post.date | date_to_string }}</span> ~ {{ post.description }} </p>{% endif %}
-        </div>
-    </div>
-    {% endfor %}
-</div>
+<script type="text/javascript">
+    (function () {
+
+        'use strict';
+
+        // define variables
+        var items = document.querySelectorAll(".timeline li");
+
+        // check if an element is in viewport
+        // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+                if (isElementInViewport(items[i])) {
+                    items[i].classList.add("in-view");
+                }
+            }
+        }
+
+        // listen for events
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("resize", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+
+    })();
+</script>

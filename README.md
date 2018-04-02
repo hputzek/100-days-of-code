@@ -21,5 +21,3 @@ The code also serves as my playground to try out stuff, so it's not too clean ;-
 ### Build
 
 To build the page using jekyll: ```bundle exec jekyll serve```
-
-To build the css: ```grunt```
