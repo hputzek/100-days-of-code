@@ -3,6 +3,7 @@ layout: post
 title: "Rooting my phone to fix google backup transport"
 description: "Fix backup and restore function on xiaomi MI5s"
 category: diary
+startDate: 2017-06-20
 tags: [adb shell, twrp, android, miui]
 comments: false
 learnings: 

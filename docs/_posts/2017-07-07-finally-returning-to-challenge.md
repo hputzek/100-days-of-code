@@ -3,6 +3,7 @@ layout: post
 title: "Finally doing some coding again"
 description: "Since my holidays are over I did not find much time to code in the last days"
 category: diary
+startDate: 2017-06-20
 tags: [javascript, ES6, contenteditable]
 comments: false
 learnings: 

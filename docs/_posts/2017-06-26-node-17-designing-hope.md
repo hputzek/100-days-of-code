@@ -3,6 +3,7 @@ layout: post
 title: "NODE17 FORUM FOR DIGITAL ARTS"
 description: "DESIGNING HOPE"
 category: diary
+startDate: 2017-06-20
 tags: [frankfurt, vvvv, performance, art]
 comments: false
 links:

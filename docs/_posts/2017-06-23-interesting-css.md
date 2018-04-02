@@ -3,6 +3,7 @@ layout: post
 title: "Discovered css property 'text-decoration-skip: ink'"
 description: Tried out flexbox and some fancy css properties
 category: diary
+startDate: 2017-06-20
 tags: [javascript, css, vue.js, templating]
 comments: false
 learnings: 

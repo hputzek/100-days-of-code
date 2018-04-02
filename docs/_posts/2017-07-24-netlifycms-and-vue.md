@@ -3,6 +3,7 @@ layout: post
 title: "Experiments with netlify cms and vue/nuxt"
 description: "using netlifycms to provide content for a nuxt/vue app"
 category: diary
+startDate: 2017-06-20
 tags: [netlify cms, netlify, vue.js, nuxt, github]
 comments: false
 learnings: 

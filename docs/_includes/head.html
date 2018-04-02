@@ -1,8 +1,8 @@
 {%   assign today = page.date | date: '%s'      %}
-{%   assign start = '19-06-2017 00:00:00' | date: '%s'  %}
+{%   assign start = post.startDate | date: '%s'  %}
 {%   assign secondsSince = today | minus: start     %}
 {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
-{%   assign daysSince = hoursSince | divided_by: 24  %}
+{%   assign daysSince = hoursSince | divided_by: 24 | plus: 2  %}
 <meta charset="utf-8">
 <title>{{ site.description }}</title>
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
@@ -31,6 +31,6 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700|Open+Sans:300" rel="stylesheet">
-<link rel="stylesheet" href="{{ site.url }}/css/main.min.css" type="text/css" />
+<link rel="stylesheet" href="{{ site.url }}/css/base.css" type="text/css" />
 <script src="https://www.celljs.org/cell.js"></script>
 <script src="{{ site.url }}/js/cell.js"></script>

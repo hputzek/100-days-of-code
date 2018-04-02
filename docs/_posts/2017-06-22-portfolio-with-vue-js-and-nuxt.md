@@ -3,6 +3,7 @@ layout: post
 title: Portfolio site using vue.js and nuxt
 description: building a portfolio site for a friend
 category: diary
+startDate: 2017-06-20
 tags: [javascript, vue.js, nuxt, portfolio]
 comments: false
 learnings: 

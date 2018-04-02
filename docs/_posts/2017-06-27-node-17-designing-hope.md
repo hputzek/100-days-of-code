@@ -3,6 +3,7 @@ layout: post
 title: "Another day @ #Node17"
 description: "a week full of art, discourse and learning"
 category: diary
+startDate: 2017-06-20
 tags: [vvvv, node17, conference, talks]
 comments: false
 links:

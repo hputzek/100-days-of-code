@@ -3,6 +3,7 @@ layout: post
 title: "Styling for the diary"
 description: "Second day of the 100 days of code challenge"
 category: diary
+startDate: 2017-06-20
 tags: [css, javascript, jekyll, liquid]
 comments: false
 learnings: 

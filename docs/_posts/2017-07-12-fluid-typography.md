@@ -3,6 +3,7 @@ layout: post
 title: "Fluid Typography & Layout"
 description: "Making slider Elements fluid"
 category: diary
+startDate: 2017-06-20
 tags: [scss, codepen, experimental]
 comments: false
 learnings: 

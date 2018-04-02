@@ -3,6 +3,7 @@ layout: post
 title: "Another android day..."
 description: "Fixing the button problem"
 category: diary
+startDate: 2017-06-20
 tags: [android, configuration]
 comments: false
 learnings:

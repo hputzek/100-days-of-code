@@ -12,10 +12,10 @@ title: #100daysOfCode Challenge - a diary from Hendrik Putzek
 <div class="listing">
     {% for post in paginator.posts %}
     {%   assign today = post.date | date: '%s'      %}
-    {%   assign start = '19-06-2017 00:00:00' | date: '%s'  %}
+    {%   assign start = post.startDate | date: '%s'  %}
     {%   assign secondsSince = today | minus: start     %}
     {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
-    {%   assign daysSince = hoursSince | divided_by: 24  %}
+    {%   assign daysSince = hoursSince | divided_by: 24 | plus: 2  %}
     <div class="post-preview">
         <div class="mega-octicon octicon-book post-preview--icon"></div>
         <div class="post-preview--content">

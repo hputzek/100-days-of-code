@@ -3,6 +3,7 @@ layout: post
 title: "(Responsive) Image Processing using Webpack & gulp"
 description: "autogenerating srcset + preview images for vue app"
 category: diary
+startDate: 2017-06-20
 tags: [javascript, webpack, gulp, responsive, image processing]
 comments: false
 learnings: 
