@@ -3,6 +3,7 @@ layout: post
 title: "I started the 100 days of code challenge"
 description: "Hendrik Putzek started the 100 days of code challenge"
 category: diary
+startDate: 2018-04-02
 tags: [javascript, jekyll, github, css, grunt, git, liquid]
 comments: false
 learnings: 
