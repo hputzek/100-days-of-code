@@ -4,9 +4,12 @@ title: #100daysOfCode Challenge - a diary from Hendrik Putzek
 ---
 <section class="timeline">
     <ul>
-        {% for post in paginator.posts %} {% assign today = post.date | date: '%s' %} {% assign start = post.startDate | date: '%s'
-        %} {% assign secondsSince = today | minus: start %} {% assign hoursSince = secondsSince | divided_by: 60 | divided_by:
-        60 %} {% assign daysSince = hoursSince | divided_by: 24 | plus: 2 %}
+        {% for post in paginator.posts %} 
+        {% assign today = post.date | date: '%s' %} 
+        {% assign start = post.startDate | date: '%s' %} 
+        {% assign secondsSince = today | minus: start %} 
+        {% assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60 %} 
+        {% assign daysSince = hoursSince | divided_by: 24 | plus: 2 %}
         <li class="post-preview" data-day="{{daysSince}}">
             <a class="post-preview--content" href="{{site.url}}{{post.url}}">
                 <time datetime="{{ post.date}}">{{ post.date | date_to_string }}</time>

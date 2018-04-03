@@ -7,6 +7,11 @@
 <title>{{ site.description }}</title>
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
+{%   assign today = page.date | date: '%s' %}
+{%   assign start = page.startDate | date: '%s' %}
+{%   assign secondsSince = today | minus: start %}
+{%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60 %}
+{%   assign daysSince = hoursSince | divided_by: 24 | plus: 2 %}
 {% if site.owner.twitter %}<!-- Twitter Card and Open Graph tags -->
 <meta name="twitter:title" content="{% if daysSince %}Day {{ daysSince }}: {% endif %}{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}">
 <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
