@@ -7,6 +7,10 @@
 @import "timeline";
 @import "fontSizes";
 
+.site {
+    overflow: hidden;
+}
+
 // fonts
 body {
     font-family: $font-serif;
