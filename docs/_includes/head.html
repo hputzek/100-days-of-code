@@ -1,12 +1,13 @@
-{%   assign today = page.date | date: '%s'      %}
-{%   assign start = post.startDate | date: '%s'  %}
-{%   assign secondsSince = today | minus: start     %}
-{%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
-{%   assign daysSince = hoursSince | divided_by: 24 | plus: 2  %}
+{% assign today = page.date | date: '%s' %}
+{% assign start = page.startDate | date: '%s' %}
+{% assign secondsSince = today | minus: start %}
+{% assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60 %}
+{% assign daysSince = hoursSince | divided_by: 24 | plus: 2 %}
 <meta charset="utf-8">
-<title>{% if page.layout == 'default' %}100DaysOfCode{% endif %}{{ site.description }}</title>
+<title>{% if page.layout == 'default' %}100DaysOfCode{% endif %} {{ site.title }}</title>
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-{% if site.owner.twitter %}<!-- Twitter Card and Open Graph tags -->
+{% if site.owner.twitter %}
+<!-- Twitter Card and Open Graph tags -->
 <meta name="twitter:title" content="{% if daysSince %}Day {{ daysSince }}: {% endif %}{% if page.layout == 'default' %}100DaysOfCode{% endif %}{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}">
 <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <meta name="twitter:creator" content="@{{ site.owner.twitter }}">
