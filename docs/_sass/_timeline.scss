@@ -4,6 +4,10 @@
 $timeline-background: transparent;
 $timeline-foreground: #fff;
 
+.timeline {
+  overflow: hidden;
+}
+
 .timeline ul {
     background: $timeline-background;
     padding: 0 0 20vh 0;

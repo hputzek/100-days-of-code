@@ -7,6 +7,10 @@
 @import "timeline";
 @import "fontSizes";
 
+* {
+    box-sizing: border-box;
+}
+
 // fonts
 body {
     font-family: $font-serif;
