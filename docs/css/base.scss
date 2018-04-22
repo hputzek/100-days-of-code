@@ -52,7 +52,7 @@ img {
 .container {
     background: none;
     width: 100%;
-    max-width: 800px;
+    max-width: 720px;
     margin: 0 auto;
     padding: 1vh 2vw;
 }
@@ -71,6 +71,22 @@ header, footer {
 }
 
 header {
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+    transform: rotate(-1.5deg) translatey(-40px);
+    position: relative;
+    top: -20px;
+    padding: 55px 0 20px 0;
+    width: 102%;
+    left: -1%;
+    position: sticky;
+    z-index: 100;
+    margin-bottom: -40px;
+
+    .container {
+        position: relative;
+        transform: rotate(1.5deg) perspective(1px);
+    }
+
     h1 {
         display: inline-block;
         font-size: 20px;
@@ -81,9 +97,6 @@ header {
         margin: 0;
         padding: 0;
     }
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .nav {
@@ -103,6 +116,7 @@ header {
 }
 
 footer {
+    box-shadow: 2px -2px 12px rgba(0,0,0,0.1);
     margin-top: 3vh;
     position: sticky;
     bottom: 0;
@@ -174,3 +188,24 @@ blockquote {
   blockquote p {
     display: inline;
   }
+
+  // about
+  .site-about {
+      display: flex;
+  }
+
+ .avatar {
+    transition: .3s all;
+    transition-property: max-width, max-height;
+    margin-right: 10px;
+    border-radius: 100%;
+    max-width: 80px;
+    max-height: 80px;
+}
+@media screen and (min-width: 640px) {
+    .avatar {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+ 

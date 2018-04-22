@@ -15,6 +15,7 @@ $timeline-foreground: #fff;
   }
   
   .timeline ul li {
+    box-shadow: 2px 0px 8px rgba(0,0,0,0.2);
     list-style-type: none;
     position: relative;
     margin: 0 auto;
@@ -39,7 +40,7 @@ $timeline-foreground: #fff;
     text-align: center;
     border-radius: 50%;
     background: inherit;
-    border: 2px solid #bbb;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.4)  
   }
 
   // first item: make the timeline-point bigger
